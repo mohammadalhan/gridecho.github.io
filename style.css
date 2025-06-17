@@ -4,6 +4,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   color: #ffffff;
   background: #0a0a0a;
+  scroll-behavior: smooth;
 }
 
 /* HEADER */
@@ -13,6 +14,9 @@ header {
   align-items: center;
   background: #111827;
   padding: 1em 2em;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 .logo {
   font-size: 1.5em;
@@ -24,6 +28,7 @@ header {
   text-decoration: none;
   margin-left: 20px;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 .nav-links a:hover {
   color: #60a5fa;
@@ -33,11 +38,12 @@ header {
 .hero {
   position: relative;
   height: 100vh;
-  background: url('assets/hero-bg.png') no-repeat center center/cover;
+  background: url('hero-bg.png') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding-left: 5%;
+  overflow: hidden;
 }
 .overlay {
   position: absolute;
@@ -55,20 +61,24 @@ header {
 }
 .hero h1 {
   font-size: 3em;
+  font-weight: bold;
   margin-bottom: 0.5em;
+  color: #ffffff;
 }
 .hero p {
-  font-size: 1.1em;
+  font-size: 1.2em;
   margin-bottom: 1em;
+  color: #e5e7eb;
 }
 .cta {
   display: inline-block;
   background: #3b82f6;
   color: #fff;
   padding: 12px 24px;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  transition: background 0.3s ease;
 }
 .cta:hover {
   background: #2563eb;
@@ -77,13 +87,16 @@ header {
 /* CONTENT SECTIONS */
 section {
   padding: 60px 5%;
+  background: #111827;
 }
 h2 {
   color: #60a5fa;
+  font-size: 2em;
   margin-bottom: 20px;
 }
 p {
-  line-height: 1.6;
+  line-height: 1.7;
+  color: #d1d5db;
 }
 
 /* FOOTER */
@@ -106,9 +119,40 @@ footer {
   border-radius: 25px;
   font-weight: bold;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  z-index: 999;
+  z-index: 1000;
 }
 .chat-button a {
   color: white;
   text-decoration: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .cta {
+    padding: 10px 20px;
+    font-size: 0.95em;
+  }
+
+  .nav-links a {
+    margin-left: 12px;
+    font-size: 0.9em;
+  }
+
+  .hero {
+    justify-content: center;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 90%;
+  }
 }
