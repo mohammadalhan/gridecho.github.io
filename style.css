@@ -186,3 +186,19 @@ footer {
     gap: 10px;
   }
 }
+.hero h1 {
+  font-size: 2em; /* already applied, good */
+}
+
+.hero-content {
+  padding: 0 1em; /* ensures text doesn’t touch screen edges */
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .chat-button {
+    padding: 8px 12px;
+    font-size: 0.85em;
+    right: 15px;
+    bottom: 15px;
+  }
+}
