@@ -5,39 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our Projects | GridEcho</title>
   <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <div class="logo"><span class="icon">🔐</span> GridEcho</div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <section>
-    <h2>Highlighted Projects</h2>
-    <div class="projects">
-      <div class="project">
-        <h3>🏢 Enterprise Network Rollout</h3>
-        <p>Designed and implemented a secure three-tier network architecture across 4 sites, integrating OSPF, EIGRP, HSRP, VLANs, DHCP, NAT, and wireless networks.</p>
-      </div>
-      <div class="project">
-        <h3>☁ Azure VM Infrastructure</h3>
-        <p>Deployed and configured Azure VMs, managed cloud firewall and NTP/TFTP integrations, and orchestrated scale sets and availability zones for performance and fault tolerance.</p>
-      </div>
-      <div class="project">
-        <h3>🧪 Security Lab with Linux/Windows</h3>
-        <p>Set up VPN, AD Domain, CentOS Apache services, RADIUS authentication, and SSH hardened access for an enterprise proof-of-concept lab.</p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 GridEcho. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+  <style>
+    /* Navbar styles */
+    .nav {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1.5rem;
+      font-family: Arial, sans-serif;
+      background-color: #222;
+    }
+    .nav > li {
+      position: relative;
+    }
+    .nav > li > a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 1rem 1.2rem;
+      transition: background-color 0.3s ease;
+    }
+    .nav > li > a:hover,
+    .nav > li > a:focus {
+      background-color: #444;
+      outline: none;
+    }
+    .dropdown > a {
+      cursor: pointer;
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #333;
+      min-width: 180px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 0 0 6px 6px;
+      z-index: 1000;
+    }
+    .dropdown-menu li a {
+      display: block;
+      padding: 0.75rem 1rem;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .dropdown-menu li a:hover,
+    .dropdown-menu li a:focus {
+      background-color: #555;
+      outline:
