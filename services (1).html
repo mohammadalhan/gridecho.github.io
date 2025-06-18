@@ -5,16 +5,149 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our Services | GridEcho</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* NAVBAR with dropdown styles */
+    .nav {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1.5rem;
+      font-family: Arial, sans-serif;
+      background-color: #222;
+    }
+    .nav > li {
+      position: relative;
+    }
+    .nav > li > a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 1rem 1.2rem;
+      transition: background-color 0.3s ease;
+    }
+    .nav > li > a:hover,
+    .nav > li > a:focus {
+      background-color: #444;
+      outline: none;
+    }
+    .dropdown > a {
+      cursor: pointer;
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #333;
+      min-width: 180px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 0 0 6px 6px;
+      z-index: 1000;
+    }
+    .dropdown-menu li a {
+      display: block;
+      padding: 0.75rem 1rem;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .dropdown-menu li a:hover,
+    .dropdown-menu li a:focus {
+      background-color: #555;
+      outline: none;
+    }
+    .dropdown:hover > .dropdown-menu,
+    .dropdown:focus-within > .dropdown-menu {
+      display: block;
+    }
+    @media (max-width: 600px) {
+      .nav {
+        flex-direction: column;
+      }
+      .nav > li {
+        width: 100%;
+      }
+      .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+      }
+    }
+
+    /* Basic page styling */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background-color: #222;
+      color: white;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .services {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .service {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .service h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #222;
+      color: white;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="logo"><span class="icon">🔐</span> GridEcho</div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="services.html">Services ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="cloud-consulting.html">Cloud Consulting</a></li>
+            <li><a href="cybersecurity.html">Cybersecurity Audits</a></li>
+            <li><a href="network-design.html">Network Design</a></li>
+            <li><a href="it-support.html">IT Support & Monitoring</a></li>
+            <li><a href="infrastructure.html">Infrastructure Setup</a></li>
+          </ul>
+        </li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
