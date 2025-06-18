@@ -202,3 +202,36 @@ footer {
     bottom: 15px;
   }
 }
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #111;
+  min-width: 220px;
+  border-radius: 5px;
+  z-index: 99;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #333;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
